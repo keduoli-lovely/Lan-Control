@@ -1,0 +1,18 @@
+{
+  "nikename": "keduoli",
+  "AdPart": 41234,
+  "wspart": "9191",
+  "defAdPart": 41234,
+  "defwspart": 9191,
+  "password": "66C46F42995462527C",
+  "autorun": false,
+  "httpPort": "10240",
+  "script": {
+    "text": {
+      "name": "text",
+      "path": "D:\\keduoli_desk\\ToolApp\\userTool\\resources\\script\\1.txt"
+    }
+  },
+  "ip": "192.168.110.10",
+  "LinkIp": "192.168.110.10"
+}

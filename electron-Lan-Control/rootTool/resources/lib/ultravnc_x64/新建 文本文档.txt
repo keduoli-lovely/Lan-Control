@@ -1,0 +1,4 @@
+启动 .winvnc.exe -run -config Dkeduoli_deskultravnc_x64runconfig.ini
+查看 .\vncviewer.exe 192.168.110.11::5900 -password keduoli
+
+关闭 taskkill /IM winvnc.exe /F

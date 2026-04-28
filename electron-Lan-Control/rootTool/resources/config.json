@@ -1,0 +1,11 @@
+{
+  "AdPart": 41234,
+  "ADRunTime": 3000,
+  "wspart": 9191,
+  "password": "66C46F42995462527C",
+  "LinkPwd": "6b6564756f6c69",
+  "BROADCAST_INTERVAL": 5000,
+  "ADKey": "keduoli_love",
+  "autorun": false,
+  "HttpPort": 10240
+}

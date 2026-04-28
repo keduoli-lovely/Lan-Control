@@ -1,0 +1,62 @@
+(22:48:48:390)	FurMark 2.9.0.0 (build: Jul  4 2025@11:43:28)
+(22:48:48:390)	(c)2007-2025 Geeks3D
+(22:48:48:390)	homepage: https://www.geeks3d.com/furmark/
+(22:48:48:390)	discord server : https://geeks3d.com/discord/
+(22:48:48:391)	FurMark (GeeXLab engine) initialization...
+(22:48:48:391)	command line: D:\keduoli_desk\ToolApp\userTool\resources\lib\FurMark_win64\furmark.exe --demo furmark-gl --width 1920 --height 1080 --fullscreen 
+(22:48:48:391)	FurMark home directory: D:\keduoli_desk\ToolApp\userTool\resources\lib\FurMark_win64\
+(22:48:48:391)	[stb] STB image loader. Supported formats: *.JPEG, *.PNG, *.TGA, *.BMP, *.PSD, *.GIF, *.HDR, *.PIC
+(22:48:48:391)	[tinyexr] EXR image loader.
+(22:48:48:391)	[lib3ds] Lib3ds loader (core plugin).
+(22:48:48:391)	[ObjLoaderV1] OBJ 3D loader (core plugin).
+(22:48:48:391)	[ObjLoaderV2] OBJ loader based on Tiny OBJ Loader (core plugin).
+(22:48:48:391)	[STL] STL (StereoLithography) 3D loader (core plugin).
+(22:48:48:391)	[glTF] glTF 3D loader (core plugin).
+(22:48:48:391)	[SQLite3] SQLite3 version 3.50.2
+(22:48:48:391)	GraphX Core 0.59.0.0 (codename: Maxwell) initialization ok.
+(22:48:48:391)	Windows version: Windows 11 build 26100
+(22:48:48:391)	HW platform type: PC
+(22:48:48:391)	SW platform type: Windows 64-bit
+(22:48:48:392)	[GpuMonitor] Operating system detected: Windows 11 build 26100
+(22:48:48:398)	[GpuMonitor] NV/R530+: physical GPU(s): 1 - logical GPU(s): 1
+(22:48:48:438)	[GpuMonitor] Num GPUs detected: 2
+(22:48:48:438)	[GpuMonitor] > GPU0
+(22:48:48:438)	[GpuMonitor]   - name: NVIDIA GeForce RTX 4060 Ti
+(22:48:48:438)	[GpuMonitor]   - PCI codes: 0x10DE-0x2805
+(22:48:48:438)	[GpuMonitor]   - Bus ID: 1
+(22:48:48:438)	[GpuMonitor]   - VBIOS: 95.06.25.00.6a
+(22:48:48:438)	[GpuMonitor]   - core temperature: 39 degC
+(22:48:48:438)	[GpuMonitor]   - driver: 576.52
+(22:48:48:438)	[GpuMonitor] > GPU1
+(22:48:48:438)	[GpuMonitor]   - name: OrayIddDriver Device
+(22:48:48:438)	[GpuMonitor]   - PCI codes: 0x232DD-0x1127559
+(22:48:48:438)	[GpuMonitor]   - driver: 17.1.58.818 (11-15-2022)
+(22:48:48:438)	FurMark (GeeXLab engine) started ok.
+(22:48:48:438)	system DPI: 96
+(22:48:48:632)	Fullscreen mode enabled. Resolution: 1920x1080
+(22:48:48:693)	3D window size: 1920 x 1080
+(22:48:48:919)	current DPI: xdpi(96), ydpi(96) - DPI scale: 1.0
+(22:48:49:074)	GL_RENDERER: NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2
+(22:48:49:074)	GL_VENDOR: NVIDIA Corporation
+(22:48:49:074)	GL_VERSION: 3.2.0 NVIDIA 576.52
+(22:48:49:074)	GL_SHADING_LANGUAGE_VERSION: 1.50 NVIDIA via Cg compiler
+(22:48:49:074)	OpenGL version detected: 3.2
+(22:48:49:074)	OpenGL extensions: 434
+(22:48:49:089)	[ArtifactScanner] Artifact scanner for GPU stability checking.
+(22:48:49:681)	[ Demo Quick Stats ]
+(22:48:49:681)	- demo                 : FurMark (GL) (built-in: YES)
+(22:48:49:681)	- renderer             : NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2
+(22:48:49:681)	- 3D API               : OpenGL 3.2.0 NVIDIA 576.52
+(22:48:49:681)	- resolution           : 1920x1080
+(22:48:49:681)	- frames               : 93
+(22:48:49:681)	- duration             : 540 ms
+(22:48:49:681)	- FPS (min/avg/max)    : -1 / 0 / -1
+(22:48:49:681)	- GPU 0: NVIDIA GeForce RTX 4060 Ti [10DE-2805]
+(22:48:49:681)	  .max temperature: 39°C
+(22:48:49:681)	  .max usage: 98%
+(22:48:49:681)	  .max core clock: 2580 MHz
+(22:48:49:681)	  .min core clock: 2430 MHz
+(22:48:49:681)	- GPU 1: OrayIddDriver Device [232DD-1127559]
+(22:48:50:553)	FurMark (GeeXLab engine) is shutting down...
+(22:48:50:556)	GraphX Core stopped ok.
+(22:48:50:557)	FurMark (GeeXLab engine) shutdown ok.
