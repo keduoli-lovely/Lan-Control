@@ -1,0 +1,117 @@
+warning: unused import: `std::fs`
+ --> src\server\command.rs:5:5
+  |
+5 | use std::fs;
+  |     ^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `std::path::Path`
+ --> src\server\command.rs:6:5
+  |
+6 | use std::path::Path;
+  |     ^^^^^^^^^^^^^^^
+
+warning: unused import: `Path`
+ --> src\server\file_monitor.rs:1:17
+  |
+1 | use std::path::{Path, PathBuf};
+  |                 ^^^^
+
+warning: unused import: `std::sync::Arc`
+ --> src\server\file_monitor.rs:2:5
+  |
+2 | use std::sync::Arc;
+  |     ^^^^^^^^^^^^^^
+
+warning: unused import: `std::time::Duration`
+ --> src\server\file_monitor.rs:3:5
+  |
+3 | use std::time::Duration;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Mutex`
+ --> src\server\file_monitor.rs:5:19
+  |
+5 | use tokio::sync::{Mutex, mpsc};
+  |                   ^^^^^
+
+warning: variable does not need to be mutable
+  --> src\server\broadcast.rs:62:12
+   |
+62 |         Ok(mut store) => {
+   |            ----^^^^^
+   |            |
+   |            help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `get_connected_devices` is never used
+   --> src\server\command.rs:141:14
+    |
+141 | pub async fn get_connected_devices(
+    |              ^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `compute_file_difference` is never used
+  --> src\server\file_monitor.rs:89:8
+   |
+89 | pub fn compute_file_difference(old_content: &str, new_content: &str) -> Option<String> {
+   |        ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: struct `FileMonitor` is never constructed
+   --> src\server\file_monitor.rs:100:12
+    |
+100 | pub struct FileMonitor {
+    |            ^^^^^^^^^^^
+
+warning: associated items `new`, `start_monitoring`, `handle_events`, and `stop_monitoring` are never used
+   --> src\server\file_monitor.rs:106:12
+    |
+105 | impl FileMonitor {
+    | ---------------- associated items in this implementation
+106 |     pub fn new() -> Result<Self, String> {
+    |            ^^^
+...
+125 |     pub fn start_monitoring(&mut self) -> Result<(), String> {
+    |            ^^^^^^^^^^^^^^^^
+...
+136 |     pub async fn handle_events<F>(&mut self, callback: F) -> Result<(), String> 
+    |                  ^^^^^^^^^^^^^
+...
+166 |     pub fn stop_monitoring(&mut self) -> Result<(), String> {
+    |            ^^^^^^^^^^^^^^^
+
+warning: function `sync_all_script_files` is never used
+   --> src\server\file_sync.rs:167:8
+    |
+167 | pub fn sync_all_script_files(scripts: &serde_json::Value) -> Result<(), String> {
+    |        ^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `get_synced_files_status` is never used
+   --> src\server\file_sync.rs:177:8
+    |
+177 | pub fn get_synced_files_status() -> Result<HashMap<String, String>, String> {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `cleanup_orphaned_files` is never used
+   --> src\server\file_sync.rs:207:8
+    |
+207 | pub fn cleanup_orphaned_files(active_scripts: &serde_json::Value) -> Result<(), String> {
+    |        ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: methods `send_all` and `get_devices` are never used
+   --> src\server\handle_run\devices_map.rs:192:18
+    |
+ 48 | impl DevicesMap {
+    | --------------- methods in this implementation
+...
+192 |     pub async fn send_all(&self, msg: String) -> anyhow::Result<()> {
+    |                  ^^^^^^^^
+...
+203 |     pub async fn get_devices(&self) -> HashMap<String, DevicePlayload> {
+    |                  ^^^^^^^^^^^
+
+warning: `video_scree_server` (lib) generated 15 warnings (run `cargo fix --lib -p video_scree_server` to apply 7 suggestions)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.53s

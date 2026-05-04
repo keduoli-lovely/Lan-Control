@@ -1,0 +1,38 @@
+[package]
+name = "scree_client"
+version = "0.1.0"
+description = "keduoli.com"
+authors = ["keduoli"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "scree_client_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["devtools", "tray-icon"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] } 
+tokio-tungstenite = "0.21"
+futures-util = "0.3.31"
+tungstenite = "0.21"
+tauri-plugin-store = "2"
+screenshots = "0.8.10"
+webp = "0.3.1"
+get_if_addrs = "0.5"
+base64 = "0.22.1"
+reqwest = { version = "0.11", features = ["blocking"] }
+zip = "0.6"
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-autostart = "2"

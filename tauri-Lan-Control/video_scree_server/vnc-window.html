@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>VNC Viewer</title>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        overflow: hidden;
+      }
+
+      iframe {
+        border: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <iframe id="vncFrame"></iframe>
+
+    <script type="module">
+      import { invoke } from "@tauri-apps/api/core";
+      import { WebviewWindow } from "@tauri-apps/api/webviewWindow";
+
+      const params = new URLSearchParams(window.location.search);
+      const host = params.get("host") || "127.0.0.1";
+      const port = params.get("port") || "5901";
+      const password = params.get("password") || "";
+      const url = `/novnc/vnc.html?host=${host}&port=${port}&password=${password}&autoconnect=true&show_dot_cursor=true&scale=true&resize=scale`;
+      const iframe = document.getElementById("vncFrame");
+      iframe.src = url;
+
+      (async () => {
+        const vnc_win = await WebviewWindow.getCurrent();
+        vnc_win?.listen("tauri://close-requested", async (event) => {
+          if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage({ type: "disconnect" }, "*");
+          }
+          iframe.src = "";
+          if (iframe.parentNode) {
+            iframe.parentNode.removeChild(iframe);
+          }
+          await vnc_win.destroy();
+        });
+      })();
+
+      // 操作
+      window.__vncHook = {
+        // 鼠标操作
+        onPointer: (x, y, mask) => {
+          console.log(x, y, mask, 1);
+        },
+
+        // 键盘操作
+        onKey: (down, keysym) => {
+          console.log(down, keysym, 2);
+        },
+
+        // 发送剪贴板（本地 → 服务器）
+        onSendClipboard: (text) => {
+          console.log(text, 4);
+        },
+
+        // 接收剪贴板（服务器 → 本地）
+        onReceiveClipboard: (text) => {
+          console.log(text, 11);
+        },
+      };
+
+      iframe.addEventListener("load", () => {
+        iframe.contentWindow.__vncHook = window.__vncHook;
+      });
+    </script>
+  </body>
+</html>
